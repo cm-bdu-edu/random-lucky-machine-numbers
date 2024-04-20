@@ -93,27 +93,25 @@
     <canvas id="canvas"></canvas>
     <img src="logo.png" alt="logo" class="logo">
     <div class="container">
-        <div class="row justify-content-center align-items-center" style="height: 100vh;" >
+        <div class="row justify-content-center align-items-center vh-100">
             <div class="col-md-10">
-                
-                <h1 class="text-center" style="color:#333333;" ><i>Random Số May Mắn</i></h1>
-                <b id="message">
-                    <p class="message text-center" style="color: green; font-size: 40;"></p>
-                </b>
-                <div class="random-number text-center" id="randomNumber"></div>
-
-                <div class="input-group">
+                <h1 class="text-center text-primary"><i>Random Số May Mắn</i></h1>
+                <div id="message">
+                    <p class="message text-center text-success display-4"></p>
+                </div>
+                <div class="random-number text-center display-1" id="randomNumber"></div>
+                <div class="input-group my-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text">Khoảng giá trị</span>
                     </div>
-                    <input  type="number" min="1" max="100" class="form-control" id="minNumber" value="1">
-                    <input  type="number" min="1" max="100" class="form-control" id="maxNumber" value="100">
+                    <input type="number" min="1" max="100" class="form-control" id="minNumber" value="1">
+                    <input type="number" min="1" max="100" class="form-control" id="maxNumber" value="100">
                     <div class="input-group-append">
-                        <button class="btn" onclick="generateRandomNumber()" >Quay số</button>
+                        <button class="btn btn-primary" onclick="generateRandomNumber()">Quay số</button>
                     </div>
                 </div>
                 <div id="selectPrize" class="text-center">
-                    <label  for="prizeOptions"><b>Chọn giải:</b></label>
+                    <label for="prizeOptions"><b>Chọn giải:</b></label>
                     <select id="prizeOptions" class="custom-select">
                         <option value="1">Giải 1</option>
                         <option value="2">Giải 2</option>
@@ -121,9 +119,8 @@
                         <option value="4">Giải 4</option>
                     </select>
                 </div>
-                <!-- Bảng danh sách các số nhận được giải -->
-                <div class="table-responsive">
-                    <table class="table table-bordered mt-4" >
+                <div class="table-responsive mt-4">
+                    <table class="table table-bordered">
                         <thead>
                             <tr>
                                 <th scope="col">Số Nhận Giải</th>
@@ -131,13 +128,13 @@
                             </tr>
                         </thead>
                         <tbody id="winnersList">
-                            <!-- Dữ liệu sẽ được thêm vào đây bằng JavaScript -->
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
